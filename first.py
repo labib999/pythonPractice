@@ -31,14 +31,50 @@ def ask():
 def intro(name,age,uni,semester,cgpa):
     print(f"hi my name is {name.upper()}. I am {datetime.datetime.now().year - age} years old. I am currently studying in {uni.upper()} and in {semester}th semester. Even tho I didnt wanted to say it but my cgpa is {cgpa}. Thanks")
 
+def Even(a):
+    if a % 2 == 0:
+        return True
+    else:
+        return False
+
+def IsPositive(a):
+    return a > 0
+
+def IsZero(a):
+    return a == 0
+
+def AskForNumber():
+    try:
+        return int(input("write down the number for parity and sign check: "))
+    except:
+        print("it should be an number")
+        return None
+
+def Number():
+    while True:
+        a = AskForNumber()
+        if a:
+            break
+
+    if IsPositive(a):
+        sign = "positive"
+    elif IsZero(a):
+        sign = "zero"
+    else:
+        sign = "negative"
+        
+    parity = "even" if Even(a) else "odd"
+
+    print(f"the number is {sign} and {parity}")
+
 def main():
-    ask()
+    Number()
     while True:
         umm = input("keep going?: y = yes...n = no ")
         if umm == "n":
             print("nice one ngga")
             break
         else:
-            ask()
+            Number()
 
 main()
