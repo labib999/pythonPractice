@@ -67,8 +67,23 @@ def Number():
 
     print(f"the number is {sign} and {parity}")
 
+def RangeFor(a,b):
+    i = a
+    for i in range(a, b + 1):
+        print(i,end=" ")
+    print()
+    print(f"max here is {b} and min is {a}")
+
+def RangeWhile(a,b):
+    i = a
+    while i <= b:
+        print(i)
+        i += 1
+
+
 def main():
-    Number()
+    #Number()
+    RangeFor(1,30)
     while True:
         umm = input("keep going?: y = yes...n = no ")
         if umm == "n":
