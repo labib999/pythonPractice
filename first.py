@@ -80,6 +80,17 @@ def RangeWhile(a,b):
         print(i)
         i += 1
 
+def ToDoList():
+    toDoList = []
+    while True:
+        a = input("add task? (yes or no): ")
+        if a == "yes":
+            toDoList.append(input("write here: "))
+        else:
+            break
+
+
+
 
 def main():
     #Number()
